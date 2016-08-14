@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wp{
+    width: 600px;
+    height: 100px;
+    margin:50px auto;
+}
+label span{
+    display: inline-block;
+    color: #333;
+    font-size: 16px;
+    margin:10px 6px;
+}
+label{
+    margin:0 10px;
+}
