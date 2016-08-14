@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间日期设置</title>
+    <link rel="stylesheet" type="text/css" href="css/date.css">
+</head>
+<body>
+    <h1 id="h1">00:00:00</h1>
+
+
+    <script src="../jQ/jquery.js"></script>
+    <script src="js/date.js"></script>
+    <script>
+        var onclick = function() {                  
+            var d = new Date();
+            var arr = Helper.getDateArr(d);
+         
+            var h1 = document.getElementById('h1');
+            var time =arr[3] + ':' + arr[4] + ':' + arr[5];
+                h1.innerHTML = time;
+        }
+        onclick();
+        setInterval(onclick,1000)
+    </script>
+</body>
+</html>

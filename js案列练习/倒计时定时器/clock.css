@@ -1,0 +1,11 @@
+.wp{
+    width: 600px;
+    height: 300px;
+    margin:0 auto;
+}
+.wp h1{
+    text-align: center;
+}
+.wp input{
+    margin-left: 180px;
+}

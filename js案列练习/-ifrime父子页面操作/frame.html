@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>子页面</title>
+    <link rel="stylesheet" href="css/frame.css">
+</head>
+<body>
+
+<div id="wp" class="wp">
+    <button id="my-btn" class="my-btn">my-btn</button>
+    <div id="text">你好</div>
+    inner
+</div>
+<script src="js/frame.js"></script>
+<script>
+    !function(window,document,undefined) {
+        var mybtn = dom("my-btn");
+            console.log(mybtn);
+        mybtn.onclick = function() {
+            var pwindow = window.parent,
+                    pdocument = pwindow.document,
+                    text = pdocument.getElementById('text');
+            text.innerHTML = '你好啊';
+        }
+
+    }(window,document);
+
+    //for(var i = 0; i<5;i++){
+    //    alert(i)
+    //}
+    //
+    //console.log(i)
+
+
+</script>
+
+
+    <script></script>
+</body>
+</html>

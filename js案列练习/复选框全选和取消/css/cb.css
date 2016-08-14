@@ -1,0 +1,12 @@
+.arrows{
+    display: block;
+    width: 24px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    margin-top:-18px;
+    background-color: #555;
+}
+.arrows.right{
+    right: 0;
+}

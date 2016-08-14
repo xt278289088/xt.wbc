@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+<form onsubmit="return verification()">
+    <div class="wp">
+        <div class="width">
+           <label>账号: <input  id="username"  type="text">; </label>  
+        </div>
+
+        <div class="width">
+            <label>密码: <input id="password" type="password"></label>
+        </div>
+
+        <div class="width">
+            <label>性别: </label>  
+            <label>男<input type="radio" name = "gender" checked> </label>
+            <label>女 <input type="radio" name = "gender"></label>
+        </div>
+
+        <div class="width">
+            <label>手机: <input id="cellphoto" type="text"></label>
+        </div>
+
+        <div class="width">
+            <label>邮箱: <input id="postbox1" type="text"></label>
+        </div>
+        <div class="width">
+            <label>
+                学历: <select name="" id="edbk"><!-- multiple = "multiple" -->
+                <option value="0">请选择</option>
+                <option value="1">大专</option>
+                <option value="2">本科</option>
+                <option value="3">一本</option>
+                <option value="4">博士</option>
+                <option value="5">博士后</option>
+            </select>
+            </label>      
+        </div>
+        <div class="dizhi">
+           <label>地址: <textarea  name="" id="address" cols="30" rows="5"></textarea></label> 
+        </div>
+        <div class="width">
+            爱好:   <label>游泳<input type="checkbox" name="hobbis"></label> 
+                    <label>打篮球<input type="checkbox" name="hobbis"></label>
+                    <label>打羽毛球<input type="checkbox" name="hobbis"> </label>
+        <input type="submit" value='确认并提交' >    
+        <input type="reset" value='重置' >    
+        </div>
+    </div>
+
+
+
+</form>
+<script src = "js/form.js"></script>
+    <script>
+    /*!function(window){*/
+
+            var verification = function() {
+                var username = dom('username'),
+                    password = dom('password'),
+                    address = dom('address'),
+                    edbk = dom('edbk'),
+                    mobileRE = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i,
+                    postbox = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+                    postbox1 = dom('postbox1'),
+                    hobbis = document.getElementsByName('hobbis'),
+                    cellphoto = dom('cellphoto');
+                    console.log(edbk.value)
+                    console.log(hobbis)
+
+            /*  账户名:*/
+                    if(username.value ==''){
+                        alert('请输入账户');
+                        return false;
+                    }
+                    if(username.value.length < 6) {
+                        alert('账户名长度必须大于6位')
+                        return false;
+                    }
+                /*密码:*/    
+                    if(password.value == ''){
+                        alert('密码不能为空');
+                        return false;
+                    }
+                    if(password.value.length < 6){
+                        alert('密码的长度必须大于6位数');
+                        return false;
+                    }
+                /*手机号码:*/
+                    if(!mobileRE.test(cellphoto.value)){
+                        alert('请输入正确的手机号码');
+                        return false;
+                    }
+               /* 邮箱验证:*/
+                    if(!postbox.test(postbox1.value)){
+                        alert('您的电子邮箱格式不正确');
+                        return false;
+                    };
+               /* 学历验证 */   
+                    if(edbk.value.length == 0 ){
+                        alert('请选择学历');
+                        return false;
+                    }
+                   /* 验证爱好*/
+                   var arr=[];
+                   for(var i = 0; i < hobbis.length; i++ ){
+                        if(hobbis[i].checked){
+                            arr.push(hobbis[i])
+                        }
+                   };
+                   if(arr.length ==0){
+                        alert('请选择爱好')
+                        return false;
+                   }
+                 /*  地址验证*/
+                    if(address.value ==''){
+                        alert('请输入地址');
+                        return false;
+                    }
+        }
+   /* }(window)*/
+       
+
+    </script>
+
+</body>
+</html>

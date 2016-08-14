@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/select.css">
+</head>
+<body>
+    <div class="wp">
+        <label>
+            <span>省:</span>
+            <select name="" id="prov">
+            <option value="0">请选择</option>
+            </select>
+        </label>    
+        <label>
+            <span>市:</span>
+            <select name="" id="city">
+            <option value="0">请选择</option>
+        </select>
+        </label>    
+        <label>
+            <span>县/区:</span>
+            <select name="" id="area">
+            <option value="0">请选择</option>
+            </select>
+        </label>    
+    </div>
+    
+    
+ <script src="../jQ/jquery.js"></script>   
+ <script src="js/select.js"></script>
+ <script>  
+    !function(window,document,$,undefined) {
+        $('#prov').on('change',function() {
+            var val = this.value;
+                cityData = getChildrenByVal(val,cityData3)
+             initlist(cityData,'city')      
+         });
+
+        /*$('#city').on('change',function() {
+            var val = this.value,
+                areaDate = getChildrenByVal(val,cityData)
+             initlist(areaDate,'area')      
+         }) */   
+
+
+
+           
+        var initlist = function(data,renderId) {
+            var optArr = ['<option value="0">请选择</option>'] ;
+            $.each(data,function(index ,obj){
+                optArr.push('<option value="',obj.value, '">',obj.text,'</option>')
+            } )
+            console.log(optArr.join(''))
+            $('#'+renderId).html(optArr.join(''));
+        }     
+
+        var getChildrenByVal = function(val,pDate) {
+            var curChildren = [];
+            $.each(pDate,function(index ,obj){
+                if(obj.value ==val) {
+                    curChildren = obj.children;
+                    return false; /*跳出执行*/
+                }
+            } )
+            return curChildren;
+        }
+        initlist(cityData3,'prov')    
+
+
+    }(window,document,jQuery);
+
+
+
+ </script>   
+</body>
+</html>

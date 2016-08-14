@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="hc.css">
+    <style>
+        span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="btn" class="div">
+         <div id="div"></div>
+    </div>
+   
+ <script>
+        function pyramid() {
+            for (var i=0; i<10; i++) {
+                for (var k=0; k<10 - i - 1; k++) {
+                    document.write('<span></span>');
+                }
+                for (var j=0; j<=2*i; j++) {
+                    document.write('<span>*</span>');
+                }
+                document.write('<br>');
+            }
+        }
+        pyramid();
+    </script>
+
+
+    <script src="hc.js"></script>
+</body>
+</html>

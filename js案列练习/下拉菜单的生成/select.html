@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <span>个人游玩爱好:</span><select name="" id="select">
+        <option value="">请选择</option>
+    </select>
+    <button id="create">生成</button>
+
+
+   <script>
+        var select = document.getElementById('select'),
+            create = document.getElementById('create'),
+            arr = ['故宫','颐和园','圆明园','十渡','后海','天坛','坝上草原','北戴河'],
+            len = arr.length,
+            newArr = ['<option value="">请选择</option>'];
+        create.onclick = function() {
+            for(var i = 0; i < len; i++){
+            newArr.push(
+                    '<option value="">'+arr[i]+'</option>'
+                )
+        }
+        select.innerHTML = newArr.join('')
+
+        }    
+        
+
+   </script>        
+</body>
+</html>       

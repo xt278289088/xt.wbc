@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父页面</title>
+    <link rel="stylesheet" href="css/frame.css">
+</head>
+<body>
+<iframe id = "frame" src="frame.html" frameborder="0"></iframe>
+    <div class="wp">
+        <button  id="my-btn" class="my-btn">my-btn</button>
+        <ul id="ul" style="position: absolute;bottom:-150px; left:0;">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        outer<div id="text">你好333</div>
+    </div>
+    
+
+    <script src="js/frame.js"></script>
+    <script>
+    !function(window,document,undefined) {
+        var mybtn = dom("my-btn"),
+            frame = dom("frame"),
+            ul = dom('ul'),
+            lis = ul.getElementsByTagName('li');
+        console.log(lis)
+      /*  mybtn.onclick = function() {
+            var cwindow = frame.contentWindow,
+                cdocument = cwindow.document,
+                text = cdocument.getElementById('text');
+            text.innerHTML = '你好啊';
+        }*/
+        lis.onclick = function() {
+            this.innerHTML = '草泥马';
+            console.log(lis)
+
+        }
+
+    }(window,document);
+
+//for(var i = 0; i<5;i++){
+//    alert(i)
+//}
+//
+//console.log(i)
+
+
+    </script>
+</body>
+</html>

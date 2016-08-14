@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+<div class="wp">
+    <h1 id="h1">00:00:00</h1>
+    <input id="time" type="text">
+    <select id='unit'  name="" id="">
+        <option value="0">请选择</option>
+        <option value="3600">时</option>
+        <option value="60">分</option>
+        <option value="1">秒</option>
+    </select>
+    <button id="btn">开始倒计时</button>
+</div>
+
+
+<script src="clock.js"></script>
+<script>
+    var math = 1;
+    btn.onclick = function(){
+        var btn = functionname('btn'),
+            unit =functionname('unit').value,
+            time =functionname('time').value,
+            h1 = functionname('h1'),
+            btn = functionname('btn'),
+            h,M,s,
+            timer, 
+            innercontent = h1.innerHTML,
+            totalseconds;
+            math++ ;
+
+        if(isNaN(time) || time == '') {
+            alert('尼玛，能不能给老子输入数字')
+            return;
+        }  
+        if(unit==0){
+            alert('尼玛，能不能给老子请选择一个计时单位')
+            return;
+        };
+
+        console.log(h1.innerHTML)
+        totalseconds = unit*time;
+        /*btn.innerHTML = '停止计时器';*/
+        function runner(){
+        if( math % 2 == 0){
+            btn.innerHTML = '停止倒计时'
+                  
+        }else{
+            btn.innerHTML = '开始倒计时';
+            clearInterval(timer); 
+            functionname('time').value = null;
+            return
+         }
+            if(totalseconds <= 0){
+            clearInterval(timer);
+            // alert('时间到！');
+           /* time = '';*/
+            btn.innerHTML = '开始倒计时';
+            h1.style.color = 'blue';
+            /*console.log(time)*/
+            functionname('time').value = null;
+            }
+            if( 1 < totalseconds && totalseconds <= 10){
+            h1.style.color = 'red';
+            };
+            h = Math.floor( totalseconds / ( 3600) );
+            M = Math.floor( (totalseconds % 3600)/60)
+            s = totalseconds % 60;
+            h1.innerHTML = fuil(h) + ':' + fuil(M) + ":" + fuil(s);
+            totalseconds--;
+        }
+            timer = setInterval(runner,1000) ;
+            runner();
+            console.log(timer) 
+        function fuil(x) {
+            return x < 10 ? x = '0' + x : x;
+        }
+    }            
+
+
+
+
+</script>
+</body>
+</html>

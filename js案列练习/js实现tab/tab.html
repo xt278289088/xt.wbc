@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tab.css">
+    <style>
+        .tab-wp{
+            width: 600px;
+            height: 400px;
+            margin:0 auto;
+        }
+        ul li a{
+            width: 100px;
+            float: left;
+            height: 50px;
+            line-height:50px;
+            margin:10px;
+            background-color: gray;
+            color:#fff;
+            text-align: center;
+        }
+        ul li a.on{
+            background-color: #000;
+        }
+        ul li{
+            list-style:none;
+        }
+        ul li:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .con-wp{
+            width:600px;
+            height:350px;
+            line-height: 350px;
+            background-color: blue;
+            overflow:hidden;
+            text-align: center;
+            font-size:24px;
+        }
+        .content{
+            width:600px;
+            height:350px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tab-wp">
+        <ul>
+            <li id="li">
+                <a class="on" href="javascript:void(0);">新闻</a>
+                <a href="javascript:void(0);">历史</a>
+                <a href="javascript:void(0);">页面</a>
+                <a href="javascript:void(0);">政治</a>
+                <a href="javascript:void(0);">军事</a>
+            </li>
+        </ul>
+        <div id="tab-div" class="con-wp">
+            <div class="content">111</div>
+            <div class="content">222</div>
+            <div class="content">333</div>
+            <div class="content">444</div>
+            <div class="content">555</div>
+        </div>
+        
+    </div>
+
+
+
+    <script src="../Helper/helper.js"></script>
+    <script src="js/tab.js"></script>
+    <script>
+    !function(){
+        var lis = Helper.dom('li'),
+            tabdiv = Helper.dom('tab-div'),
+            divs = tabdiv.getElementsByTagName('div'),
+            tabAs = lis.getElementsByTagName('a'),
+            len = tabAs.length;   
+            console.log(divs);
+
+        if( divs.length != tabAs.length) {
+            return 'tab对应实目不对，请查验；'
+        }
+
+        for(var i = 0;i < len; i++) {
+            tabAs[i].setAttribute('index',i)
+            tabAs[i].onclick = function() {
+                var index = this.getAttribute('index')
+                /*this.className = 'on';*/
+                for(var j = 0;j < len;j++) {
+                    divs[j].style.display = 'none';
+                    tabAs[j].className = '';
+                }
+                this.setAttribute('class', 'on')
+                divs[index].style.display = 'block'
+            }
+        }
+    }()
+        
+
+    </script>
+</body>
+</html>

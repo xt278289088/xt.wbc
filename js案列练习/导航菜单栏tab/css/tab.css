@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style:none;
+    float:left;
+    margin:10px;
+    height: 40px;
+    line-height: 40px;
+    width: 80px;
+    text-align: center;
+    border:1px solid #ccc;
+    color:green;
+    font-size:20px;
+    font-family: '微软雅黑';
+    cursor:pointer;
+}
+ul:after{
+     content:'';
+     display:block;
+     clear:both;
+}
+ul{
+    width: 700px;
+    margin:20px auto;
+  /*   background-color:#333; */
+    color:#fff;
+}
+ul > li{
+    margin-left: 24px;
+}
+.kj{
+    width: 700px;   
+    height: 300px;
+    overflow:hidden;
+    border:2px solid green;
+    margin:10px auto;
+}
+.kj > div{
+    width: 700px;   
+    height: 300px;
+    background-color: red;
+}
+.tab ul .lion{
+    background-color: red;
+}
+.tabs2 ul li{
+    border:1px solid green;
+}
+.tabs2 ul li.lion{
+    background-color: blue;
+
+}
+div.tabs2 .kj div{
+    background-color:green;
+}

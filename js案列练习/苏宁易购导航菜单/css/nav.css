@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+.right-nav-bar{
+    width: 35px;
+    background-color: #383838;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+}
+
+.right-nav-inner{
+    width: 35px;
+    height: 365px;
+    margin-top:182px;
+}
+
+.head{
+    width: 35px;
+    height: 30px;
+}
+
+.head:hover{
+    background-color: #FFAA01;
+}
+
+.head .icons{
+    display:block;
+    width: 35px;
+    height: 30px;
+    background:url(../img/tu.png) 0  0px;
+    margin:5px auto;
+    cursor:pointer;
+}
+
+.head .icons:hover{
+    background:url(../img/tu.png) 26px 0px;
+}
+
+.shop{
+    width: 35px;
+    height: 117px;
+    margin-top:5px;
+}
+
+.shop:hover{
+    background-color: #FFAA01;
+}
+
+.shop:hover .shop-inner{
+    border:none;
+}
+
+.shop .shop-inner{
+    width: 29px;
+    height: 117px;
+    border:1px solid #4D4D4D;
+    margin:0 auto;
+    border-width: 1px 0;
+}
+
+.right-nav-inner .result{
+    width: 35px;
+    height: 260px;
+}
+
+.right-nav-inner .result ul li .class{
+    width: 25px;
+    height: 30px;
+
+}
+
+.right-nav-inner .result ul li{
+    margin:5px auto;
+    position: relative;
+}
+
+.right-nav-inner .result ul li > a i{
+    display: block;
+    width: 35px;
+    height: 30px;
+    background-color:#383838;
+    position: relative;
+    z-index: 2;
+}
+/*  .tu{
+   position: relative;
+} */
+.right-nav-inner .result ul li > a i:hover{
+    background-color: #FFAA01;
+}
+.right-nav-inner .result ul li > a:hover span{
+    background-color: #FFAA01;
+    color: #383838;
+}
+.right-nav-inner .result ul li > a i:hover
+.img{
+    display:block;
+    width: 35px;
+    height: 30px;
+    cursor:pointer;
+    position:absolute; 
+    z-index: 9;  
+}
+
+.img.img-1{
+    background:url(../img/tu.png) 0  -23px;
+}
+
+.img.img-1:hover{
+    background:url(../img/tu.png) 26px  -23px;
+}
+
+.img.img-2{
+    background:url(../img/tu.png) 0  -47px;
+}
+.img.img-2:hover{
+    background:url(../img/tu.png) 26px  -47px;
+}
+
+.img.img-3{
+    background:url(../img/tu.png) 0  -94px;
+}
+
+.img.img-3:hover{
+    background:url(../img/tu.png) 26px  -94px;
+}
+.img.img-4{
+    background:url(../img/tu.png) 0  -117px;
+}
+
+.img.img-4:hover{
+    background:url(../img/tu.png) 26px  -117px;
+}
+
+.img.img-5{
+    background:url(../img/tu.png) 0  -140px;
+}
+
+.img.img-5:hover{
+    background:url(../img/tu.png) 26px  -140px;
+}
+
+.img.img-6{
+    background:url(../img/tu.png) 0  -164px;
+}
+
+.img.img-6:hover{
+    background:url(../img/tu.png) 26px  -164px;
+}
+
+.img.img-7{
+    background:url(../img/tu.png) 0  -186px;
+}
+
+.img.img-7:hover{
+    background:url(../img/tu.png) 26px  -186px;
+}
+
+ .massage{
+    display:block;
+    height: 30px;
+    width: 45px;
+    z-index: 1;
+    position:absolute;
+    top: 0;
+    left: 0;
+    text-align:center; 
+    background-color:#383838;
+} 
+
+.font{
+    font:12px/30px arial;
+    color:#FFAA01;
+}
+.right-nav-inner .result ul li > a span.width{
+    width: 73px;
+    height: 30px;
+    line-height: 30px;
+}

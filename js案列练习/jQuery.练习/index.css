@@ -1,0 +1,46 @@
+.red-bod{
+	width: 300px;
+	height: 200px;
+	border:2px solid red;
+	background-color: green;
+}
+.form{
+    width: 500px;
+    margin: 10px auto;
+}
+.form button{
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+}
+.form input{
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    margin:10px;
+}
+.form input:focus{
+    outline:none;
+}
+.form .block{
+    margin-left: 98px;
+}
+.fous-input{
+    display: none;
+}
+.ensure{
+    margin-left:98px;
+}
+.add{
+    position: relative;
+    top: 2px;
+}
+.shizhong{
+    width:460px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: green;
+    color:#fff;
+    font-size: 24px;
+}

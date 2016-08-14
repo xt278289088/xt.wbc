@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+ body{
+    background-color:#333;
+}
+.accordions{
+    background-color: #fff;
+    width: 360px;
+    margin:50px auto;
+    text-indent:30px;
+}
+.accordions h1{
+    height: 47px;
+    line-height: 47px;
+    cursor:pointer;
+}
+.accordions ul{
+    display:none;
+}
+.accordions li{
+    width: 360px;
+    height: 40px;
+    line-height: 40px;
+    list-style:none;
+    background-color:#444359;
+}
+.accordions li:hover{
+    background-color:#b63b4d;
+} 
+.color{
+    color:red;
+}

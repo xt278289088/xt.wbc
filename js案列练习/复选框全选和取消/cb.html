@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <style>
+    table{
+        margin:0 auto;
+    }
+    table tr,td,th{
+        height: 50px;
+        width: 70px;
+        text-align: center;
+        /* line-height: 50px; */
+    }
+    </style>
+</head>
+<body>
+<table border="1">
+        <thead>
+            <tr>
+                <th><input id="all" type="checkbox"></th>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>性别</th>
+                <th>地址</th>
+            </tr>
+        </thead>
+        <tr>
+            <th><input id="input3"  type="checkbox" name="check" ></th>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+        </tr>
+        <tr>
+            <th><input id="input2"  type="checkbox" name="check" ></th>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+        </tr>
+        <tr>
+            <th><input id="input1" type="checkbox" name="check"  ></th>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+            <td>aaa</td>
+        </tr>
+    </table>
+<script src="../jQ/jquery.js"></script>
+<script src="js/cb.js"></script>
+<script>
+!function() {
+    var all = document.getElementById('all'),
+        inputs = document.getElementsByName('check'),
+        status,
+        bgcolor,
+        len = inputs.length;
+    all.onclick = function() {
+        if(this.checked){
+/*                inputs.checked = 'checked';
+            inputs.style.backgroundColor = 'yellow';*/
+            status = 'checked';
+            bgcolor = 'yellow';
+        }else{
+            status = "";
+            bgcolor = '#fff'
+        }
+        for(var i=0; i<len; i++) {
+            inputs[i].checked = status;
+            inputs[i].parentNode.parentNode.style.backgroundColor=bgcolor;
+        }            
+    };
+    for(var j = 0;j < len; j++){
+        inputs[j].onclick = function() {
+             if(this.checked){
+                 this.parentNode.parentNode.style.backgroundColor ='yellow';
+            }else{
+                this.parentNode.parentNode.style.backgroundColor = '#fff';
+            }
+        }
+            if(isChecked()) {
+                all.checked = 'checked';
+             }else{
+                all.checked = '' ;
+            }
+        }
+   
+                
+            
+        
+        function isChecked() {
+           for(var k = 0;k < len;k++) {
+            console.log(inputs[k]);
+                if(!inputs[k].checked){
+                    return false;
+                }
+
+           }
+             return true;
+        }
+       /* isCheckedAll();*/
+        console.log(inputs.length)
+    // console.log( all.checked = 'checked')
+}();
+
+
+
+</script>
+
+<!--     <input type="checkbox" checked>
+<input type="radio" checked="checked">
+
+<hr>
+
+<table border="1">
+    <tr>
+        <th><input id="all" type="checkbox"></th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>电话</th>
+    </tr>
+    <tr>
+        <td><input id="c1" name="chk" type="checkbox"></td>
+        <td>aaa</td>
+        <td>bbb</td>
+        <td>ccc</td>
+    </tr>
+    <tr>
+        <td><input id="c2" name="chk" type="checkbox"></td>
+        <td>aaa</td>
+        <td>bbb</td>
+        <td>ccc</td>
+    </tr>
+    <tr>
+        <td><input id="c3" name="chk" type="checkbox"></td>
+        <td>aaa</td>
+        <td>bbb</td>
+        <td>ccc</td>
+    </tr>
+    <tr>
+        <td><input id="c4" name="chk" type="checkbox"></td>
+        <td>aaa</td>
+        <td>bbb</td>
+        <td>ccc</td>
+    </tr>
+    <tr>
+        <td><input id="c5" name="chk" type="checkbox"></td>
+        <td>aaa</td>
+        <td>bbb</td>
+        <td>ccc</td>
+    </tr>
+</table>
+
+<script>
+    function initCheckBox() {
+        var all = document.getElementById('all'),
+            chks = document.getElementsByName('chk'),
+            len = chks.length,
+            j,
+            k;
+        // console.log(chks)
+        all.onclick = function() {
+            var i, status = '', bgColor = '';
+            // this.checked && (status = 'checked');
+            if (this.checked) {
+                status = 'checked';
+                bgColor = 'yellow';
+            } else {
+                status = '';
+                bgColor = '#fff'
+            }
+            for (i=0; i<len; i++) {
+                chks[i].checked = status;
+                chks[i].parentNode.parentNode.style.backgroundColor = bgColor;
+            }
+        };
+        for (j=0; j<len; j++) {
+            chks[j].onclick = function() {
+                // TODO
+                // console.log(this);
+                if (this.checked) {
+                    this.parentNode.parentNode.style.backgroundColor = 'yellow';
+                } else {
+                    this.parentNode.parentNode.style.backgroundColor = '#fff';
+                }
+                
+                if (isCheckedAll()) {
+                    all.checked = 'checked';
+                } else {
+                    all.checked = '';
+                }
+            }
+        }
+        function isCheckedAll() {
+            for (k=0; k<len; k++) {
+                if (!chks[k].checked) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    initCheckBox();
+</script> -->
+</body>
+</html>

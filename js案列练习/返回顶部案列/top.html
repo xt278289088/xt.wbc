@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>返回顶部</title>
+    <link rel="stylesheet" href="css/top.css">
+</head>
+<body>
+
+    <div class="back-wp">
+
+    </div>
+        <div id = "backtop" class="backtop">
+            
+        </div>
+<script src="js/top.js"></script>
+<script>
+    var back = dom('backtop');
+    console.log(back);
+    window.onscroll = function() {
+        console.log(document.body.scrollTop)
+    }   
+        back.onclick = function() {
+          // /*  var backtop = document.body.scrollTop;*/backtop 是一个具体的值所以不能递减
+            var timer = function () {
+                document.body.scrollTop-=100;
+                if(document.body.scrollTop <= 0){
+                    clearInterval(time)
+                }
+            };
+            timer();
+            var time = setInterval(timer,100);
+        }  
+                
+        window.onscroll = function() {
+            var st = document.body.scrollTop;
+            var sh = window.innerHeight;
+            if(st > sh) {
+                back.style.display = 'block';
+            }else{
+                back.style.display = 'none';
+            }
+        }
+
+ 
+
+
+
+</script>
+</body>
+</html>

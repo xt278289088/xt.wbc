@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table thead tr th,tbody tr td{
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        table,th,td{
+            border:1px solid blue;
+        }
+        table{
+            /* border-collapse:collapse; */
+        }
+
+    </style>
+</head>
+<body>
+    <table cellspacing="5">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>地址</th>
+                <th>爱好</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+          <!--   <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr> <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr> <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr> -->
+        </tbody>
+    </table>
+    <script>
+    !function(window,document,undefined) {
+        var arr = [
+                {
+                    name:'陈彤彤',
+                    gender:'男',
+                    age:20,
+                    address:'昌平',
+                    hobby:'网游'
+                } ,
+
+                {
+                    name:'郭丽梅',
+                    gender:'女',
+                    age:20,
+                    address:'昌平',
+                    hobby:'吃货'
+                }, 
+
+                {
+                    name:'大宝',
+                    gender:'男',
+                    age:20,
+                    address:'昌平',
+                    hobby:'网游'
+                } ,
+
+                {
+                    name:'二宝',
+                    gender:'男',
+                    age:20,
+                    address:'昌平',
+                    hobby:'网游'
+                } ,
+
+                {
+                    name:'老公',
+                    gender:'男',
+                    age:20,
+                    address:'昌平',
+                    hobby:'网游'
+                } ,
+
+                {
+                    name:'老婆',
+                    gender:'男',
+                    age:20,
+                    address:'昌平',
+                    hobby:'网游'
+                },
+            ],
+            nullarr = [];
+
+        for(var i = 0; i < arr.length; i++){
+                nullarr.push(
+                   ' <tr>',
+                       ' <td>',arr[i].name,'</td>',
+                        '<td>',arr[i].gender,'</td>',
+                        '<td>',arr[i].age,'</td>',
+                        '<td>',arr[i].address,'</td>',
+                        '<td>',arr[i].hobby,'</td>',
+                   '</tr>'
+          )
+        }
+        document.getElementById('tbody').innerHTML = nullarr.join('')
+
+    }(window,document);
+
+
+
+
+    </script>
+</body>
+</html>
