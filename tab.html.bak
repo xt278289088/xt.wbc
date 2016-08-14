@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>作业还行吧使得</title>
+
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body{
+            }
+            .tab {
+                width: 100%;
+                height: 50px;
+                background-color: #fff;
+                margin:30px auto;
+            }
+            ul li {
+                list-style:none;
+            }
+            a{
+                text-decoration: none;
+            }
+            .tab-bar {
+                width: 1200px;
+                height: 50px;
+                line-height: 50px;
+                margin:0 auto;
+                border-bottom:1px solid #c8d3de;
+                position: relative;
+            }
+            .tab .tab-bar ul > li {
+                float: left;
+                margin-right:5px;
+                height: 49px;
+                width: 94px;
+                text-align: center;
+                display: inline-block;
+                border:1px solid #c8d3de;
+                background-color: #e8edf0;
+                color: #333;
+                position: relative;
+            } 
+             .tab-bar ul li.tab-li {
+
+            }
+            .tab-li{
+                margin-left: 173px;
+            }
+           /*  .tab .tab-bar ul li a:hover{
+               background-color: #fff;
+           } */
+            .tab .tab-bar ul li.active{
+                background-color: #fff;
+                border-bottom-color:#fff;
+            }
+            .tab .tab-bar ul li.active .qw  {
+                display: block;
+            }
+            .tab .tab-bar ul.qw {
+                width: 100px;
+                height: 70px;
+                position: absolute;
+                background-color:#fff;
+                width: 144px;
+                height: 144px;
+                display:none;
+                border:1px solid #c8d3de;
+                border-top: none;
+                left: -1px;
+                bottom: -146px;
+            }
+           .tab .tab-bar ul.qq li ul.qw li{
+                 float: none;
+                 width: 100%;
+                 height: 30px;
+                 line-height: 30px;
+                 text-align: center;
+                 background-color:#e8edf0; 
+                 margin:0 auto;
+                 margin-bottom:3px;
+                 border:none;
+            }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <div class="tab-bar">
+        <ul class="qq">
+            <li class="tab-li active">
+                <a  href="">首页</a>
+                <ul class="qw">
+                    <li>新闻要素</li>
+                    <li>天下奇谈</li>
+                    <li>奇闻异事</li>
+             </ul>
+            </li>
+            <li><a href="">精华</a></li>
+            <li><a href="">候选</a></li>
+            <li><a href="">新闻</a></li>
+            <li><a href="">关注</a></li>
+            <li><a href="">我评</a></li>
+            <li><a href="">我赞</a></li>
+            <li><a href="">电影</a></li>
+        </ul>
+    </div>
+      
+</div>
+
+
+
+
+
+<!-- <hr> -->
+<!-- div class="tab">
+    <div class="tab-bar">
+        <ul>
+            <li class="tab-li"><a a class="active" href="">首页</a></li>
+            <li><a href="">精华</a></li>
+            <li><a href="">候选</a></li>
+            <li><a href="">新闻</a></li>
+            <li><a href="">关注</a></li>
+            <li><a href="">我评</a></li>
+            <li><a href="">我赞</a></li>
+            <li><a href="">电影</a></li>
+        </ul>
+    </div>
+      
+</div> -->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
